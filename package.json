@@ -47,7 +47,7 @@
   },
   "scripts": {
     "preinstall": "cp -R ./* /tmp/websocket/",
-    "install": "(cd /tmp/websocket/ && node-gyp rebuild) || (exit 0)",
+    "install": "(mkdir -p /tmp/websocket/ && cd /tmp/websocket/ && node-gyp rebuild) || (exit 0)",
     "test": "faucet test/unit",
     "gulp": "gulp"
   },
